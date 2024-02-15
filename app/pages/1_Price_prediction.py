@@ -54,8 +54,8 @@ if st.button('Predict'):
 
     # predict
     base_price = np.expm1(pipeline.predict(one_df))[0]
-    low = base_price - 0.22
-    high = base_price + 0.22
+    low = base_price - 0.03
+    high = base_price + 0.03
 
     # display
     st.text("The price of the flat is between {} Cr and {} Cr".format(round(low,2),round(high,2)))
